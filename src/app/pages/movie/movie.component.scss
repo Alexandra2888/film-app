@@ -1,6 +1,6 @@
 @import '../../../styles/colors';
 
-:host  {
+:host ::ng-deep {
   .p-tabview-nav {
     justify-content: center;
     li {
