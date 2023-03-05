@@ -13,7 +13,6 @@ export interface TvShow {
   poster_path: string;
   release_date: string;
   name: string;
-  title: string,
   video: boolean;
   vote_average: number;
   vote_count: number;
@@ -53,11 +52,10 @@ export interface TvShowCredits {
   }[];
 }
 
-export const mapTvShowToItem = (tvShow: TvShow): { backdrop_path: string; overview: string; routePath: string; release_date: string; vote_average: number; name: string; id: number; title: string; vote_count: number; poster_path: string } => {
+export const mapTvShowToItem = (tvShow: TvShow): Item => {
   return {
-    title: "",
     id: tvShow.id,
-    name: tvShow.name,
+    title: tvShow.name,
     poster_path: tvShow.poster_path,
     vote_average: tvShow.vote_average,
     backdrop_path: tvShow.backdrop_path,

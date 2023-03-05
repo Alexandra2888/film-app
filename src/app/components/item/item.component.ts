@@ -7,7 +7,7 @@ import { Item } from './item';
   styleUrls: ['./item.component.scss']
 })
 export class ItemComponent implements OnInit {
-  @Input() itemData: Item | null = null;
+  @Input() itemData: Item | any;
 
   imagesSizes = IMAGES_SIZES;
 
